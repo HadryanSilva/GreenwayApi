@@ -1,0 +1,6 @@
+@GreenwayApi_HostAddress = http://localhost:5268
+
+GET {{GreenwayApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
