@@ -24,7 +24,7 @@ public static class UserMappers
             Username = userDto.Username,
             Password = userDto.Password,
             Email = userDto.Email,
-            Role = userDto.Role
+            Role = userDto.Role,
         };
     }
 }

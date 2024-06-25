@@ -1,3 +1,4 @@
+using GreenwayApi.Mapper;
 using GreenwayApi.Model;
 using Microsoft.EntityFrameworkCore;
 
@@ -11,5 +12,6 @@ public class ApplicationDbContext : DbContext
     
     public DbSet<User> Users { get; set; }
     public DbSet<Collect> Collects { get; set; }
-    
+
+
 }

@@ -1,4 +1,5 @@
 using GreenwayApi.Model;
+using GreenwayApi.Model.AutenticatorModel;
 
 namespace GreenwayApi.DTOs.User;
 

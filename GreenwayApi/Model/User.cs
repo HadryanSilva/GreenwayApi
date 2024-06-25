@@ -9,7 +9,7 @@ public class User
     [Key]
     [Column("id")]
     public Guid Id { get; set; } = Guid.Empty;
-    
+
     [Required]
     [StringLength(100)]
     [Column("username")]
@@ -18,7 +18,7 @@ public class User
     [Required]
     [Column("password")]
     public string Password { get; set; }
-    
+
     [Required]
     [EmailAddress]
     [Column("email")]
@@ -28,6 +28,5 @@ public class User
     [Column("role")]
     public UserRole Role { get; set; }
 
-    public ICollection<Collect> Collects { get; set; } = new List<Collect>();
-
+    public ICollection<Collect> Collects { get; set; } = [];
 }

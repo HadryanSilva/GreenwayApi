@@ -17,6 +17,7 @@ public class UserController : ControllerBase
         _dbContext = dbContext;
     }
 
+
     [HttpGet("{id:guid}")]
     public IActionResult FindById([FromRoute] Guid id)
     {
@@ -27,6 +28,7 @@ public class UserController : ControllerBase
         }
         return Ok(userFound.UserToResponseDto());
     }
+
 
     [HttpPost(Name = "Create User")]
     public IActionResult Save([FromBody] UserRequestDto user)

@@ -2,6 +2,7 @@ using GreenwayApi.Data;
 using GreenwayApi.DTOs.Collect;
 using GreenwayApi.Mapper;
 using GreenwayApi.Model;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace GreenwayApi.Controllers;
@@ -16,7 +17,8 @@ public class CollectController : ControllerBase
     {
         _dbContext = dbContext;
     }
-    
+
+    [Authorize(Roles = "Admin")]
     [HttpGet(Name = "Find all collects (Required Admin)")]
     public IActionResult FindAll()
     {
