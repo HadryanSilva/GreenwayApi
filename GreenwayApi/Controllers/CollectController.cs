@@ -4,6 +4,7 @@ using GreenwayApi.Mapper;
 using GreenwayApi.Model;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace GreenwayApi.Controllers;
 
@@ -20,10 +21,29 @@ public class CollectController : ControllerBase
 
     [Authorize(Roles = "Admin")]
     [HttpGet(Name = "Find all collects (Required Admin)")]
-    public IActionResult FindAll()
+    public async Task<IActionResult> FindAll([FromQuery] int pageNumber, [FromQuery] int pageSize)
     {
-        var collect = _dbContext.Collects.ToList().Select(c => c.CollectToResponseDto());
-        return Ok(collect);
+        var offset = (pageNumber - 1) * pageSize;
+        var collects = await _dbContext.Collects
+            .OrderBy(i => i.Id)
+            .Skip(offset)
+            .Take(pageSize)
+            .ToListAsync();
+        return Ok(collects);
+    }
+    
+    [HttpGet("user-collects", Name = "Find all collects by user")]
+    public async Task<IActionResult> FindAllByUser([FromQuery] Guid userId, [FromQuery] int pageNumber, 
+        [FromQuery] int pageSize)
+    {
+        var offset = (pageNumber - 1) * pageSize;
+        var collects = await _dbContext.Collects
+            .Where(i => i.UserId == userId)
+            .OrderBy(i => i.Id)
+            .Skip(offset)
+            .Take(pageSize)
+            .ToListAsync();
+        return Ok(collects);
     }
     
     [HttpGet("{id:int}", Name = "Find collect by id")]
