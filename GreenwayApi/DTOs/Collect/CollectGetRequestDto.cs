@@ -2,7 +2,7 @@ using GreenwayApi.Model;
 
 namespace GreenwayApi.DTOs.Collect;
 
-public class CollectRequestDto
+public class CollectGetRequestDto
 {
     public WasteType WasteType { get; set; }
     
