@@ -1,12 +1,197 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\aline\\source\\repos\\GreenwayApi\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7DFEC0D6-E4ED-49BD-A182-3AD3EADDE1F0}|GreenwayApi\\GreenwayApi.csproj|c:\\users\\aline\\source\\repos\\greenwayapi\\greenwayapi\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DFEC0D6-E4ED-49BD-A182-3AD3EADDE1F0}|GreenwayApi\\GreenwayApi.csproj|solutionrelative:greenwayapi\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DFEC0D6-E4ED-49BD-A182-3AD3EADDE1F0}|GreenwayApi\\GreenwayApi.csproj|c:\\users\\aline\\source\\repos\\greenwayapi\\greenwayapi\\mapper\\usermappers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DFEC0D6-E4ED-49BD-A182-3AD3EADDE1F0}|GreenwayApi\\GreenwayApi.csproj|solutionrelative:greenwayapi\\mapper\\usermappers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DFEC0D6-E4ED-49BD-A182-3AD3EADDE1F0}|GreenwayApi\\GreenwayApi.csproj|c:\\users\\aline\\source\\repos\\greenwayapi\\greenwayapi\\extensions\\roleclaimextention.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DFEC0D6-E4ED-49BD-A182-3AD3EADDE1F0}|GreenwayApi\\GreenwayApi.csproj|solutionrelative:greenwayapi\\extensions\\roleclaimextention.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DFEC0D6-E4ED-49BD-A182-3AD3EADDE1F0}|GreenwayApi\\GreenwayApi.csproj|c:\\users\\aline\\source\\repos\\greenwayapi\\greenwayapi\\model\\autenticatormodel\\secretkey.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DFEC0D6-E4ED-49BD-A182-3AD3EADDE1F0}|GreenwayApi\\GreenwayApi.csproj|solutionrelative:greenwayapi\\model\\autenticatormodel\\secretkey.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DFEC0D6-E4ED-49BD-A182-3AD3EADDE1F0}|GreenwayApi\\GreenwayApi.csproj|c:\\users\\aline\\source\\repos\\greenwayapi\\greenwayapi\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{7DFEC0D6-E4ED-49BD-A182-3AD3EADDE1F0}|GreenwayApi\\GreenwayApi.csproj|solutionrelative:greenwayapi\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DFEC0D6-E4ED-49BD-A182-3AD3EADDE1F0}|GreenwayApi\\GreenwayApi.csproj|c:\\users\\aline\\source\\repos\\greenwayapi\\greenwayapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{7DFEC0D6-E4ED-49BD-A182-3AD3EADDE1F0}|GreenwayApi\\GreenwayApi.csproj|solutionrelative:greenwayapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DFEC0D6-E4ED-49BD-A182-3AD3EADDE1F0}|GreenwayApi\\GreenwayApi.csproj|c:\\users\\aline\\source\\repos\\greenwayapi\\greenwayapi\\controllers\\collectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DFEC0D6-E4ED-49BD-A182-3AD3EADDE1F0}|GreenwayApi\\GreenwayApi.csproj|solutionrelative:greenwayapi\\controllers\\collectcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DFEC0D6-E4ED-49BD-A182-3AD3EADDE1F0}|GreenwayApi\\GreenwayApi.csproj|c:\\users\\aline\\source\\repos\\greenwayapi\\greenwayapi\\model\\userrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DFEC0D6-E4ED-49BD-A182-3AD3EADDE1F0}|GreenwayApi\\GreenwayApi.csproj|solutionrelative:greenwayapi\\model\\userrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DFEC0D6-E4ED-49BD-A182-3AD3EADDE1F0}|GreenwayApi\\GreenwayApi.csproj|c:\\users\\aline\\source\\repos\\greenwayapi\\greenwayapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DFEC0D6-E4ED-49BD-A182-3AD3EADDE1F0}|GreenwayApi\\GreenwayApi.csproj|solutionrelative:greenwayapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DFEC0D6-E4ED-49BD-A182-3AD3EADDE1F0}|GreenwayApi\\GreenwayApi.csproj|c:\\users\\aline\\source\\repos\\greenwayapi\\greenwayapi\\controllers\\authcontroller .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DFEC0D6-E4ED-49BD-A182-3AD3EADDE1F0}|GreenwayApi\\GreenwayApi.csproj|solutionrelative:greenwayapi\\controllers\\authcontroller .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DFEC0D6-E4ED-49BD-A182-3AD3EADDE1F0}|GreenwayApi\\GreenwayApi.csproj|c:\\users\\aline\\source\\repos\\greenwayapi\\greenwayapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7DFEC0D6-E4ED-49BD-A182-3AD3EADDE1F0}|GreenwayApi\\GreenwayApi.csproj|solutionrelative:greenwayapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\aline\\source\\repos\\GreenwayApi\\GreenwayApi\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "GreenwayApi\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\aline\\source\\repos\\GreenwayApi\\GreenwayApi\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "GreenwayApi\\Data\\ApplicationDbContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-25T23:12:48.262Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "RoleClaimExtention.cs",
+              "DocumentMoniker": "C:\\Users\\aline\\source\\repos\\GreenwayApi\\GreenwayApi\\Extensions\\RoleClaimExtention.cs",
+              "RelativeDocumentMoniker": "GreenwayApi\\Extensions\\RoleClaimExtention.cs",
+              "ToolTip": "C:\\Users\\aline\\source\\repos\\GreenwayApi\\GreenwayApi\\Extensions\\RoleClaimExtention.cs",
+              "RelativeToolTip": "GreenwayApi\\Extensions\\RoleClaimExtention.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-25T23:11:44.105Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\aline\\source\\repos\\GreenwayApi\\GreenwayApi\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "GreenwayApi\\appsettings.Development.json",
+              "ToolTip": "C:\\Users\\aline\\source\\repos\\GreenwayApi\\GreenwayApi\\appsettings.Development.json",
+              "RelativeToolTip": "GreenwayApi\\appsettings.Development.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-06-25T23:03:08.51Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\aline\\source\\repos\\GreenwayApi\\GreenwayApi\\appsettings.json",
+              "RelativeDocumentMoniker": "GreenwayApi\\appsettings.json",
+              "ToolTip": "C:\\Users\\aline\\source\\repos\\GreenwayApi\\GreenwayApi\\appsettings.json",
+              "RelativeToolTip": "GreenwayApi\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-06-25T23:03:03.44Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SecretKey.cs",
+              "DocumentMoniker": "C:\\Users\\aline\\source\\repos\\GreenwayApi\\GreenwayApi\\Model\\AutenticatorModel\\SecretKey.cs",
+              "RelativeDocumentMoniker": "GreenwayApi\\Model\\AutenticatorModel\\SecretKey.cs",
+              "ToolTip": "C:\\Users\\aline\\source\\repos\\GreenwayApi\\GreenwayApi\\Model\\AutenticatorModel\\SecretKey.cs",
+              "RelativeToolTip": "GreenwayApi\\Model\\AutenticatorModel\\SecretKey.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-25T23:02:54.236Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UserRole.cs",
+              "DocumentMoniker": "C:\\Users\\aline\\source\\repos\\GreenwayApi\\GreenwayApi\\Model\\UserRole.cs",
+              "RelativeDocumentMoniker": "GreenwayApi\\Model\\UserRole.cs",
+              "ToolTip": "C:\\Users\\aline\\source\\repos\\GreenwayApi\\GreenwayApi\\Model\\UserRole.cs",
+              "RelativeToolTip": "GreenwayApi\\Model\\UserRole.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-25T23:01:34.199Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CollectController.cs",
+              "DocumentMoniker": "C:\\Users\\aline\\source\\repos\\GreenwayApi\\GreenwayApi\\Controllers\\CollectController.cs",
+              "RelativeDocumentMoniker": "GreenwayApi\\Controllers\\CollectController.cs",
+              "ToolTip": "C:\\Users\\aline\\source\\repos\\GreenwayApi\\GreenwayApi\\Controllers\\CollectController.cs",
+              "RelativeToolTip": "GreenwayApi\\Controllers\\CollectController.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAAABQAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-25T22:59:37.108Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\aline\\source\\repos\\GreenwayApi\\GreenwayApi\\Program.cs",
+              "RelativeDocumentMoniker": "GreenwayApi\\Program.cs",
+              "ToolTip": "C:\\Users\\aline\\source\\repos\\GreenwayApi\\GreenwayApi\\Program.cs",
+              "RelativeToolTip": "GreenwayApi\\Program.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAAwCoAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-25T22:55:58.749Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserMappers.cs",
+              "DocumentMoniker": "C:\\Users\\aline\\source\\repos\\GreenwayApi\\GreenwayApi\\Mapper\\UserMappers.cs",
+              "RelativeDocumentMoniker": "GreenwayApi\\Mapper\\UserMappers.cs",
+              "ToolTip": "C:\\Users\\aline\\source\\repos\\GreenwayApi\\GreenwayApi\\Mapper\\UserMappers.cs",
+              "RelativeToolTip": "GreenwayApi\\Mapper\\UserMappers.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAgwAoAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-25T22:51:18.375Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AuthController .cs",
+              "DocumentMoniker": "C:\\Users\\aline\\source\\repos\\GreenwayApi\\GreenwayApi\\Controllers\\AuthController .cs",
+              "RelativeDocumentMoniker": "GreenwayApi\\Controllers\\AuthController .cs",
+              "ToolTip": "C:\\Users\\aline\\source\\repos\\GreenwayApi\\GreenwayApi\\Controllers\\AuthController .cs",
+              "RelativeToolTip": "GreenwayApi\\Controllers\\AuthController .cs",
+              "ViewState": "AQIAACsAAAAAAAAAAAAuwDcAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-25T22:46:46.212Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\aline\\source\\repos\\GreenwayApi\\GreenwayApi\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "GreenwayApi\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\aline\\source\\repos\\GreenwayApi\\GreenwayApi\\Controllers\\UserController.cs",
+              "RelativeToolTip": "GreenwayApi\\Controllers\\UserController.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAgwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-25T22:46:41.708Z"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

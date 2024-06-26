@@ -1,6 +1,8 @@
 using GreenwayApi.Data;
 using GreenwayApi.DTOs.Collect;
 using GreenwayApi.Mapper;
+using GreenwayApi.Model;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -16,10 +18,11 @@ public class CollectController : ControllerBase
     {
         _dbContext = dbContext;
     }
-    
-    [HttpGet(Name = "Find all collects  (Required Admin)")]
+
+    [Authorize(Roles = "Admin")]
+    [HttpGet(Name = "Find all collects (Required Admin)")]
     public async Task<IActionResult> FindAll([FromQuery] int pageNumber, [FromQuery] int pageSize)
-    { 
+    {
         var offset = (pageNumber - 1) * pageSize;
         var collects = await _dbContext.Collects
             .OrderBy(i => i.Id)
@@ -29,9 +32,10 @@ public class CollectController : ControllerBase
         return Ok(collects);
     }
     
-    [HttpGet("user-collects", Name = "Find all collects for a user")]
-    public async Task<IActionResult> FindAllCollectsByUser([FromQuery] Guid userId, [FromQuery] int pageNumber, [FromQuery] int pageSize)
-    { 
+    [HttpGet("user-collects", Name = "Find all collects by user")]
+    public async Task<IActionResult> FindAllByUser([FromQuery] Guid userId, [FromQuery] int pageNumber, 
+        [FromQuery] int pageSize)
+    {
         var offset = (pageNumber - 1) * pageSize;
         var collects = await _dbContext.Collects
             .Where(i => i.UserId == userId)
@@ -39,53 +43,36 @@ public class CollectController : ControllerBase
             .Skip(offset)
             .Take(pageSize)
             .ToListAsync();
-            return Ok(collects);
+        return Ok(collects);
     }
     
     [HttpGet("{id:int}", Name = "Find collect by id")]
     public IActionResult FindById([FromRoute] int id)
     {
-        var collectFound = _dbContext.Collects.Find(id);
-        if (collectFound == null)
+        var collect = _dbContext.Collects.Find(id);
+
+        if (collect == null)
         {
-            return NotFound("Collect not found");
+            return NotFound();
         }
-        return Ok(collectFound);
+        return Ok(collect);
     }
 
     [HttpPost(Name = "Create collect")]
     public IActionResult Save([FromBody] CollectRequestDto collect)
     {
         var collectToSave = collect.CollectRequestDtoToCollect();
-        var collectSaved = _dbContext.Collects.Add(collectToSave);
-        _dbContext.SaveChanges();
-        return CreatedAtAction(nameof(FindById), new {id = collectToSave.Id}, collectSaved);
-    }
-    
-    [HttpPut("{id:int}", Name = "Update collect")]
-    public async Task<IActionResult> Update([FromRoute] int id, [FromBody] CollectRequestDto collect)
-    {
-        var collectToUpdate = await _dbContext.Collects.FindAsync(id);
-        if (collectToUpdate == null)
+        _dbContext.Collects.Add(collectToSave);
+        try
         {
-            return NotFound("Collect not found");
+            _dbContext.SaveChanges();
         }
-        collectToUpdate.WasteType = collect.WasteType;
-        await _dbContext.SaveChangesAsync();
-        return Ok(collectToUpdate);
-    }
-    
-    [HttpDelete("{id:int}", Name = "Delete collect")]
-    public IActionResult Delete([FromRoute] int id)
-    {
-        var collectToDelete = _dbContext.Collects.Find(id);
-        if (collectToDelete == null)
+        catch (Exception e)
         {
-            return NotFound("Collect not found");
+            return new StatusCodeResult(500);
         }
-        _dbContext.Collects.Remove(collectToDelete);
-        _dbContext.SaveChanges();
-        return NoContent();
+        return CreatedAtAction(nameof(FindById), new {id = collectToSave.Id}, 
+            collectToSave.CollectToResponseDto());
     }
     
 }
