@@ -50,7 +50,7 @@ public class AuthController : ControllerBase
             await context.Users.AddAsync(user);
             await context.SaveChangesAsync();
 
-            return Created();
+            return Created(string.Empty, user); ;
         }
         catch
         {
@@ -63,7 +63,7 @@ public class AuthController : ControllerBase
     public async Task<IActionResult> Login(
       [FromBody] LoginViewModel model,
       [FromServices] ApplicationDbContext context,
-      [FromServices] TokenService tokenService)
+      [FromServices] ITokenService tokenService)
     {
         if (!ModelState.IsValid) return BadRequest(ModelState.Values);
 

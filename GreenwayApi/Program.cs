@@ -69,7 +69,7 @@ builder.Services.AddSwaggerGen(c =>
 });
 
 //Injeção de Dependencia
-builder.Services.AddScoped<TokenService>();
+builder.Services.AddScoped<ITokenService,TokenService>();
 builder.Services.AddScoped<CollectService>();
 builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 

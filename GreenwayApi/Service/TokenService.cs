@@ -8,7 +8,7 @@ using System.Text;
 
 namespace GreenwayApi.Service
 {
-    public class TokenService
+    public class TokenService : ITokenService
     {
         public string GenerateToken(User user)
         {

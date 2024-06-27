@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GreenwayApiTest")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9d65897497fdcff2de190823bcc48e0a1ed03de4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4d3d6e0031aa2ac670800157aae654275145b248")]
 [assembly: System.Reflection.AssemblyProductAttribute("GreenwayApiTest")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GreenwayApiTest")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
