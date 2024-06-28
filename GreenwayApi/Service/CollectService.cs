@@ -8,14 +8,11 @@ using Microsoft.EntityFrameworkCore;
 
 namespace GreenwayApi.Service;
 
-public class CollectService
+public class CollectService : ICollectService
 {
     private readonly ApplicationDbContext _dbContext;
-    
-    public CollectService(ApplicationDbContext dbContext)
-    {
-        _dbContext = dbContext;
-    }
+
+    public CollectService(ApplicationDbContext dbContext) => _dbContext = dbContext;
 
     public async Task<ICollection<CollectResponseDto>> FindAll(RequestParams parameters)
     {
@@ -27,7 +24,7 @@ public class CollectService
             .ToListAsync();
         return collects.Select(i => i.CollectToResponseDto()).ToList();
     }
-    
+
     public async Task<ICollection<CollectResponseDto>> FindAllByUser(RequestParams parameters)
     {
         var offset = (parameters.PageNumber - 1) * parameters.PageSize;
@@ -39,7 +36,7 @@ public class CollectService
             .ToListAsync();
         return collects.Select(i => i.CollectToResponseDto()).ToList();
     }
-    
+
     public CollectResponseDto FindById(int id, Dictionary<string, string> claims)
     {
         var collectFound = _dbContext.Collects.Find(id);
@@ -48,11 +45,11 @@ public class CollectService
         {
             throw new Exception("Collect not found");
         }
-        
+
         ValidateUser(claims, collectFound);
         return collectFound.CollectToResponseDto();
     }
-    
+
     public CollectResponseDto Save(CollectGetRequestDto collect)
     {
         var collectToSave = collect.CollectGetRequestDtoToCollect();
@@ -60,35 +57,35 @@ public class CollectService
         _dbContext.SaveChanges();
         return collectToSave.CollectToResponseDto();
     }
-    
+
     public CollectResponseDto Update(CollectPutRequestDto collect, Dictionary<string, string> claims)
     {
         var collectFound = _dbContext.Collects.Find(collect.Id);
-        
+
         if (collectFound == null)
         {
             throw new Exception("Collect not found");
         }
-        
+
         ValidateUser(claims, collectFound);
-        
+
         collectFound.WasteType = collect.WasteType;
         _dbContext.Collects.Update(collectFound);
         _dbContext.SaveChanges();
         return collectFound.CollectToResponseDto();
     }
-    
+
     public void Delete(int id, Dictionary<string, string> claims)
     {
         var collectToDelete = _dbContext.Collects.Find(id);
-        
+
         if (collectToDelete == null)
         {
             throw new Exception("Collect not found");
         }
-        
+
         ValidateUser(claims, collectToDelete);
-        
+
         _dbContext.Collects.Remove(collectToDelete);
         _dbContext.SaveChanges();
     }

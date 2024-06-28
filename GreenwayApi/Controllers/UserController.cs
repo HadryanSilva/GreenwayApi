@@ -11,7 +11,7 @@ namespace GreenwayApi.Controllers;
 public class UserController : ControllerBase
 {
     private readonly ApplicationDbContext _dbContext;
-    
+
     public UserController(ApplicationDbContext dbContext)
     {
         _dbContext = dbContext;
@@ -40,12 +40,12 @@ public class UserController : ControllerBase
         {
             _dbContext.SaveChanges();
         }
-        catch (Exception e)
+        catch (Exception)
         {
             return new StatusCodeResult(500);
         }
 
-        return CreatedAtAction(nameof(FindById), new {id = userToSave.Id}, userToSave.UserToResponseDto());
+        return CreatedAtAction(nameof(FindById), new { id = userToSave.Id }, userToSave.UserToResponseDto());
     }
-    
+
 }

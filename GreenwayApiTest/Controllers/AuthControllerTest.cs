@@ -9,11 +9,10 @@ using Microsoft.EntityFrameworkCore;
 using Moq;
 using SecureIdentity.Password;
 
-namespace GreenwayApiTest.Controllers
+namespace GreenwayApiTests
 {
     public class AuthControllerTests
     {
-
         [Fact]
         public async Task Register_ReturnsCreatedStatus()
         {
@@ -50,7 +49,7 @@ namespace GreenwayApiTest.Controllers
                 .Options;
 
             using var context = new ApplicationDbContext(options);
-            var tokenServiceMock = new Mock<TokenService>();
+            var tokenServiceMock = new Mock<ITokenService>();
 
             // Adicionando um usuário de teste ao banco de dados em memória
             var user = new User
@@ -83,7 +82,4 @@ namespace GreenwayApiTest.Controllers
             Assert.Equal("testtoken", okResult.Value);
         }
     }
-
 }
-
-

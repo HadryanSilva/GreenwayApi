@@ -1,4 +1,3 @@
-using System.Diagnostics;
 using GreenwayApi.DTOs.Collect;
 using GreenwayApi.DTOs.Request;
 using GreenwayApi.Exceptions;
@@ -13,12 +12,13 @@ namespace GreenwayApi.Controllers;
 [ApiController]
 public class CollectController : ControllerBase
 {
-    private readonly CollectService _collectService;
-    private readonly TokenService _tokenService;
+    private readonly ICollectService _collectService;
+    private readonly ITokenService _tokenService;
     private readonly IHttpContextAccessor _httpContextAccessor;
-    
-    public CollectController(CollectService collectService, 
-        TokenService tokenService, 
+
+    public CollectController(
+        ICollectService collectService,
+        ITokenService tokenService,
         IHttpContextAccessor httpContextAccessor)
     {
         _collectService = collectService;
@@ -33,14 +33,14 @@ public class CollectController : ControllerBase
         var collects = await _collectService.FindAll(parameters);
         return Ok(collects);
     }
-    
+
     [HttpGet("user-collects", Name = "Find all collects by user")]
     public async Task<IActionResult> FindAllByUser([FromBody] RequestParams parameters)
     {
         var collects = await _collectService.FindAllByUser(parameters);
         return Ok(collects);
     }
-    
+
     [HttpGet("{id:int}", Name = "Find collect by id")]
     public IActionResult FindById([FromRoute] int id)
     {
@@ -52,21 +52,22 @@ public class CollectController : ControllerBase
         catch (NotFoundException e)
         {
             return NotFound(e.Message);
-        } catch (NotAuthorizedException e)
+        }
+        catch (NotAuthorizedException e)
         {
             return Unauthorized(e.Message);
         }
-        
+
     }
 
     [HttpPost(Name = "Create collect")]
     public IActionResult Save([FromBody] CollectGetRequestDto collectGet)
     {
         var collectSaved = _collectService.Save(collectGet);
-        return CreatedAtAction(nameof(FindById), new {id = collectSaved.Id}, 
+        return CreatedAtAction(nameof(FindById), new { id = collectSaved.Id },
             collectSaved);
     }
-    
+
     [HttpPut(Name = "Update collect")]
     public IActionResult Update([FromBody] CollectPutRequestDto collectPut)
     {
@@ -84,7 +85,7 @@ public class CollectController : ControllerBase
             return Unauthorized(e.Message);
         }
     }
-    
+
     [HttpDelete("{id:int}", Name = "Delete collect")]
     public IActionResult Delete([FromRoute] int id)
     {
@@ -92,19 +93,26 @@ public class CollectController : ControllerBase
         {
             _collectService.Delete(id, GetClaims());
             return NoContent();
-        } catch (NotFoundException e)
+        }
+        catch (NotFoundException e)
         {
             return NotFound(e.Message);
-        } catch (NotAuthorizedException e)
+        }
+        catch (NotAuthorizedException e)
         {
             return Unauthorized(e.Message);
         }
     }
 
-    private Dictionary<string, string> GetClaims()
+    private Dictionary<string, string>? GetClaims()
     {
-        var token = _httpContextAccessor.HttpContext.Request.Headers["Authorization"];
-        return _tokenService.GetUserDataFromToken(token.ToString().Substring("Bearer ".Length));
+        var token = _httpContextAccessor?.HttpContext?.Request.Headers.Authorization;
+
+        if (!string.IsNullOrWhiteSpace(token))
+        {
+            return _tokenService.GetUserDataFromToken(token.Value.ToString()["Bearer ".Length..]);
+        }
+
+        return default;
     }
-    
 }
