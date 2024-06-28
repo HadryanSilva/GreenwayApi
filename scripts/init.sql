@@ -1,0 +1,2 @@
+CREATE DATABASE greenway_db;
+GRANT ALL PRIVILEGES ON DATABASE greenway_db TO postgres;
