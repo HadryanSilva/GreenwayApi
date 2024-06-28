@@ -70,7 +70,7 @@ builder.Services.AddSwaggerGen(c =>
 
 //Injeção de Dependencia
 builder.Services.AddScoped<ITokenService,TokenService>();
-builder.Services.AddScoped<CollectService>();
+builder.Services.AddScoped<ICollectService,CollectService>();
 builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
 var app = builder.Build();

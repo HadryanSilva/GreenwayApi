@@ -1,12 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\aline\\source\\repos\\GreenwayApi\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{E6D3BC6D-797A-458B-84F6-E6A6862E2C2B}|GreenwayApiTest\\GreenwayApiTest.csproj|c:\\users\\aline\\source\\repos\\greenwayapi\\greenwayapitest\\controllers\\authcontrollertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E6D3BC6D-797A-458B-84F6-E6A6862E2C2B}|GreenwayApiTest\\GreenwayApiTest.csproj|solutionrelative:greenwayapitest\\controllers\\authcontrollertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -14,20 +9,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": -1,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AuthControllerTest.cs",
-              "DocumentMoniker": "C:\\Users\\aline\\source\\repos\\GreenwayApi\\GreenwayApiTest\\Controllers\\AuthControllerTest.cs",
-              "RelativeDocumentMoniker": "GreenwayApiTest\\Controllers\\AuthControllerTest.cs",
-              "ToolTip": "C:\\Users\\aline\\source\\repos\\GreenwayApi\\GreenwayApiTest\\Controllers\\AuthControllerTest.cs",
-              "RelativeToolTip": "GreenwayApiTest\\Controllers\\AuthControllerTest.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAA1wBoAAAAuAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-27T22:49:14.186Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             }
           ]
         }
