@@ -11,7 +11,7 @@ public interface ICollectService
 
     CollectResponseDto FindById(int id, Dictionary<string, string> claims);
 
-    CollectResponseDto Save(CollectGetRequestDto collect);
+    CollectResponseDto Save(CollectPostRequestDto collect);
 
     CollectResponseDto Update(CollectPutRequestDto collect, Dictionary<string, string> claims);
 

@@ -16,13 +16,12 @@ public static class CollectMappers
         };
     }
 
-    public static Collect CollectGetRequestDtoToCollect(this CollectGetRequestDto collectGetDto)
+    public static Collect CollectGetRequestDtoToCollect(this CollectPostRequestDto collectPostDto)
     {
         return new Collect()
         {
-            ScheduleDate = collectGetDto.ScheduleDate,
-            WasteType = collectGetDto.WasteType,
-            UserId = collectGetDto.UserId
+            WasteType = collectPostDto.WasteType,
+            UserId = collectPostDto.UserId
         };
     }
 }

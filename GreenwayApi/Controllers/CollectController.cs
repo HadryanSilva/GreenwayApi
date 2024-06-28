@@ -61,9 +61,9 @@ public class CollectController : ControllerBase
     }
 
     [HttpPost(Name = "Create collect")]
-    public IActionResult Save([FromBody] CollectGetRequestDto collectGet)
+    public IActionResult Save([FromBody] CollectPostRequestDto collectPost)
     {
-        var collectSaved = _collectService.Save(collectGet);
+        var collectSaved = _collectService.Save(collectPost);
         return CreatedAtAction(nameof(FindById), new { id = collectSaved.Id },
             collectSaved);
     }

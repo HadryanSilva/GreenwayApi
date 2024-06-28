@@ -17,7 +17,7 @@ public class Collect
     public WasteType WasteType { get; set; }
     
     [Column("schedule_date")]
-    public DateTime ScheduleDate { get; set; } = DateTime.Today.AddDays(3);
+    public DateTime ScheduleDate { get; set; }
 
     [Column("user_id")]
     public Guid? UserId { get; set; }

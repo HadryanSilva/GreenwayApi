@@ -50,9 +50,10 @@ public class CollectService : ICollectService
         return collectFound.CollectToResponseDto();
     }
 
-    public CollectResponseDto Save(CollectGetRequestDto collect)
+    public CollectResponseDto Save(CollectPostRequestDto collect)
     {
         var collectToSave = collect.CollectGetRequestDtoToCollect();
+        collectToSave.ScheduleDate = DateTime.UtcNow.AddDays(2);
         _dbContext.Collects.Add(collectToSave);
         _dbContext.SaveChanges();
         return collectToSave.CollectToResponseDto();

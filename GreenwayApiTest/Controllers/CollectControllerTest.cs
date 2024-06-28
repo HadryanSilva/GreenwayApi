@@ -94,9 +94,9 @@ namespace GreenwayApi.Tests
         public void Save_ReturnsCreatedStatus()
         {
             // Arrange
-            var collectGetRequest = new CollectGetRequestDto();
+            var collectGetRequest = new CollectPostRequestDto();
             var collectSaved = new CollectResponseDto { Id = 1 };
-            _mockCollectService.Setup(service => service.Save(It.IsAny<CollectGetRequestDto>())).Returns(collectSaved);
+            _mockCollectService.Setup(service => service.Save(It.IsAny<CollectPostRequestDto>())).Returns(collectSaved);
 
             // Act
             var result = _controller.Save(collectGetRequest);
